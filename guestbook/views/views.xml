@@ -1,0 +1,72 @@
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="guestbook.list">
+      <field name="name">guestbook list</field>
+      <field name="model">guestbook.guest</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+        </tree>
+      </field>
+    </record>
+   
+   <record model="ir.ui.view" id="guestbook.guest_form">
+      <field name="name">guest form</field>
+      <field name="model">guestbook.guest</field>
+      <field name="arch" type="xml">
+        <form edit="false">
+          <sheet>
+            <group>
+              <group>
+            <field name="name"/>
+            <field name="email"/>
+             <field name="phone"/>
+            </group>
+            <group>  
+           
+            <field name="github"/>
+            <field name="programing_language" widget="many2many_tags" options="{'color_field': 'color', 'no_create_edit': True}"/>
+          </group>
+            </group>
+            
+            <group>
+              <field name="message"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+   
+   <record model="ir.ui.view" id="guestbook.guest_tree">
+      <field name="name">guest tree</field>
+      <field name="model">guestbook.guest</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="email"/>
+          <field name="phone"/>
+          <field name="github"/>
+        </tree>
+      </field>
+    </record>
+   
+   <record model="ir.actions.act_window" id="guestbook.languege_list_action_window">
+      <field name="name">Programing Language</field>
+      <field name="res_model">guestbook.programing_language</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+   
+    <record model="ir.actions.act_window" id="guestbook.guest_list_action_window">
+      <field name="name">Guest List</field>
+      <field name="res_model">guestbook.guest</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    
+    <record model="ir.actions.act_window" id="guestbook.guest_new_action_window">
+      <field name="name">Create Guest</field>
+      <field name="res_model">guestbook.guest</field>
+      <field name="view_mode">form</field>
+    </record>
+
+  </data>
+</odoo>

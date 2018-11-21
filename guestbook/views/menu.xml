@@ -1,0 +1,16 @@
+<odoo>
+    <data>
+
+    <menuitem name="Guest Book" id="guestbook.menu_root"/>
+
+    <menuitem name="Guest" id="guestbook.menu_guestbook" parent="guestbook.menu_root"/>
+    
+    <menuitem name="Programin Language" id="guestbook.menu_programing_language" groups="group_guest_admin" parent="guestbook.menu_root" action="guestbook.languege_list_action_window"/>
+
+    <menuitem name="List" id="guestbook.menu_guestbook_guest_list" parent="guestbook.menu_guestbook"
+              action="guestbook.guest_list_action_window" groups="group_guest_admin"/>
+    
+    <menuitem name="New" id="guestbook.menu_guestbook_guest_new" parent="guestbook.menu_guestbook"
+              action="guestbook.guest_new_action_window" groups="group_guest,group_guest_admin"/>
+    </data>
+</odoo>

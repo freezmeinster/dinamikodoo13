@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_guestbook_guest,guestbook.guestbook,model_guestbook_guest,group_guest,1,0,1,0
+access_guestbook_language,guestbook.guestbook,model_guestbook_programing_language,group_guest,1,1,1,0
+access_guestbook_admin,guestbook.guestbook,model_guestbook_guest,group_guest_admin,1,1,1,1
+access_guestbook_guestbook,guestbook.guestbook,model_guestbook_guest,,1,1,1,1
+access_guestbook_language,guestbook.guestbook,model_guestbook_programing_language,,1,1,1,1
